@@ -6,12 +6,12 @@
         <string>com.mysql-remote-backup</string>
         <key>Disabled</key>
         <false/>
-        <key>Program</key>
-        <string>/path/to/fab</string>
         <key>ProgramArguments</key>
         <array>
-            <string>-f /path/to/fabfile.py</string>
-            <string>backup:dbname='',dbuser='',dbpass=''</string>
+            <string>/path/to/fab</string>
+            <string>-f</string>
+            <string>/path/to/fabfile.py</string>
+            <string>backup:dbname=,dbuser=,dbpass=</string>
         </array>
         <key>RunAtLoad</key>
         <true/>
