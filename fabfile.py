@@ -5,11 +5,6 @@ from fabric.contrib.project import rsync_project
 from datetime import datetime
 from os import path
 
-env.user = 'henryehly'
-env.hosts += ['160.16.63.151']
-env.use_ssh_config = True
-max_backups = 5
-
 
 def backup(dbname=None, dbuser=None, dbpass=None, remote_backup_path=None, local_backup_path=None):
     validate_args([dbname, dbuser, dbpass])
