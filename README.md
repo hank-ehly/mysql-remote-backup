@@ -17,13 +17,13 @@ Backup a remote mysql database.
 
 ### Integrate with launchd (OSX)
 
-1. Copy config/launchd-example.plist.default to ~/Library/LaunchAgents/<any-name>.plist
-2. Open ~/Library/LaunchAgents/<any-name>.plist and change the boilerplate settings to your own
+1. Copy config/launchd-example.plist.default to ~/Library/LaunchAgents/any-name.plist
+2. Open ~/Library/LaunchAgents/any-name.plist and change the boilerplate settings to your own
 3. Load the plist with launchctl
     
-        launchctl load ~/Library/LaunchAgents/<any-name>.plist
+        launchctl load ~/Library/LaunchAgents/any-name.plist
         
-For more information on launchd, see the local manuals:
+For more information on launchd, see your local manuals:
 
 - launchctl(1)
 - launchd.plist(5)
