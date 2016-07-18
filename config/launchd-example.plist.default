@@ -10,6 +10,7 @@
         <string>/path/to/fab</string>
         <key>ProgramArguments</key>
         <array>
+            <string>-f /path/to/fabfile.py</string>
             <string>backup:dbname='',dbuser='',dbpass=''</string>
         </array>
         <key>RunAtLoad</key>
