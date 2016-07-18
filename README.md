@@ -17,11 +17,13 @@ Backup a remote mysql database.
 
 ### Integrate with launchd (OSX)
 
-1. Copy config/launchd-example.plist.default to ~/Library/LaunchAgents/any-name.plist
-2. Open ~/Library/LaunchAgents/any-name.plist and change the boilerplate settings to your own
-3. Load the plist with launchctl
+1. Copy `config/launchd-example.plist.default` to `~/Library/LaunchAgents/any-name.plist`
+2. Open `~/Library/LaunchAgents/any-name.plist` and edit the boilerplate settings
+3. Load the plist with launchctl to register it as an Agent/Daemon
     
         launchctl load ~/Library/LaunchAgents/any-name.plist
+
+4. By default, the command is scheduled to run everyday at 00:00. If your computer is not awake at 00:00, launchd will start the job the next time the computer wakes up.
         
 For more information on launchd, see your local manuals:
 
