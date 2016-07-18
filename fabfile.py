@@ -21,16 +21,16 @@ def backup(dbname=None, dbuser=None, dbpass=None, remote_backup_path=None, local
         local('mkdir -p ' + local_backup_path)
 
     bak_filename = get_bak_filename()
-    full_back_path = "{}/{}".format(remote_backup_path, bak_filename)
+    full_back_path = remote_backup_path + bak_filename
 
     run('mysqldump -u ' + dbuser + ' --password=' + dbpass + ' ' + dbname + ' > ' + full_back_path)
 
-    files = run('ls ' + remote_backup_path + ' | sort').split()
-    print len(files)
+    files = run('ls ' + remote_backup_path + ' | sort', quiet=True).split()
+
     if len(files) > env.max_backups:
         run('rm -f ' + "{}/{}".format(remote_backup_path, files[0]))
 
-    rsync_project(remote_backup_path, local_dir=local_backup_path, upload=False, delete=True)
+    rsync_project(remote_backup_path, local_dir=local_backup_path, upload=False, delete=True, default_opts='-pthrz')
 
 
 def validate_args(args=None):
