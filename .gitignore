@@ -1,2 +1,4 @@
 .idea/
 config/env.py
+config/env.pyc
+*.pyc

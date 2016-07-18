@@ -4,6 +4,7 @@ from fabric.contrib.files import exists
 from fabric.contrib.project import rsync_project
 from datetime import datetime
 from os import path
+import config.env
 
 
 def backup(dbname=None, dbuser=None, dbpass=None, remote_backup_path=None, local_backup_path=None):
@@ -26,7 +27,7 @@ def backup(dbname=None, dbuser=None, dbpass=None, remote_backup_path=None, local
 
     files = run('ls ' + remote_backup_path + ' | sort').split()
     print len(files)
-    if len(files) > max_backups:
+    if len(files) > env.max_backups:
         run('rm -f ' + "{}/{}".format(remote_backup_path, files[0]))
 
     rsync_project(remote_backup_path, local_dir=local_backup_path, upload=False, delete=True)
