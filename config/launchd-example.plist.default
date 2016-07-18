@@ -15,5 +15,9 @@
         </array>
         <key>RunAtLoad</key>
         <true/>
+        <key>StandardOutPath</key>
+        <string>/tmp/com.mysql-remote-backup.log</string>
+        <key>StandardErrorPath</key>
+        <string>/tmp/com.mysql-remote-backup.log</string>
     </dict>
 </plist>
