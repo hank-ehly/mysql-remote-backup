@@ -2,15 +2,18 @@
 
 Backup a remote mysql database.
 
-Usage:
+    Usage:
+    
         fab backup:dbname=<dbname>,dbuser=<dbuser>,dbpass=<dbpass>
 
         Optional arguments:
             remote_backup_path : Defaults to /tmp/bak/<dbname>
             local_backup_path  : Defaults to /tmp/bak/<dbname>
 
-Example: $ fab backup:dbname=x-account-database,dbuser=x-user-john,dbpass=x-pass-john
-         # Backup x-account-database to /tmp/bak/x-account-database remotely and locally
+    Example: 
+    
+        $ fab backup:dbname=x-account-database,dbuser=x-user-john,dbpass=x-pass-john
+        # Backup x-account-database to /tmp/bak/x-account-database remotely and locally
 
 
 ### License
