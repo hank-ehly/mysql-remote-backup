@@ -20,6 +20,8 @@
             <key>Hour</key>
             <integer>0</integer>
         </dict>
+        <key>ProcessType</key>
+        <string>Background</string>
         <key>StandardOutPath</key>
         <string>/tmp/com.mysql-remote-backup.log</string>
         <key>StandardErrorPath</key>
