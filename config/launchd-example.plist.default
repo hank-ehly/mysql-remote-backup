@@ -13,8 +13,13 @@
             <string>/path/to/fabfile.py</string>
             <string>backup:dbname=,dbuser=,dbpass=</string>
         </array>
-        <key>RunAtLoad</key>
-        <true/>
+        <key>StartCalendarInterval</key>
+        <dict>
+            <key>Minute</key>
+            <integer>0</integer>
+            <key>Hour</key>
+            <integer>0</integer>
+        </dict>
         <key>StandardOutPath</key>
         <string>/tmp/com.mysql-remote-backup.log</string>
         <key>StandardErrorPath</key>
